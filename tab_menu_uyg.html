@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            display: inline;
+            margin: 0;
+            height: 22px;
+            padding-left:5px;
+            padding-right: 50px ;
+            padding-top: 5px;
+            color: red;
+            border: 1px solid red;
+            padding-bottom: 5px;
+        }
+        ul{
+            margin: 0;
+            margin-bottom: 5px;
+        }
+        div{
+            padding: 5px;
+            width: 679px; ;
+            margin-left: 40px;
+            height: 250px;
+            border: 1px solid red;
+
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li onclick="goster('birincialan')" style="cursor: pointer;">javascript</li>
+    <li onclick="goster('ikincialan')" style="cursor: pointer;">HTML</li>
+    <li onclick="goster('ucuncualan')" style="cursor: pointer;">PHP </li>
+</ul>
+
+<div id="birincialan">
+javascript Tab'ının içeriği 
+
+</div>
+<div id="ikincialan">
+    HTMLTab'ının içeriği 
+
+</div>
+<div id="ucuncualan">
+    PHP Tab'ının içeriği 
+
+</div>
+
+<script>
+    function tumunugizle(){
+        var alanlar =document.getElementsByTagName("DIV");
+        var uzunluk =alanlar.length;
+        for(var baslangic=0;baslangic<uzunluk; baslangic++){
+            alanlar[baslangic].style.display="none";
+        }
+    }
+    function goster(deger){
+        tumunugizle();
+        document.getElementById(deger).style.display="block";
+
+    }
+</script>
+
+
+
+
+
+    
+</body>
+</html>

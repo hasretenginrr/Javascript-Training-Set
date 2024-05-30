@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="text/html initial-scale=1.0" htpp-equiv="content-type">
+</head>
+
+<body>
+    <h3>KİTAP GİRİS BÖLÜMÜ</h3>
+    <button onclick="ornek()">Yazının devamını oku</button>
+
+  <div id="detay"></div>
+
+  <script type="text/javascript" language="javascript">
+
+    function ornek(){
+        var Istek =new XMLHttpRequest();
+        Istek.onreadystatechange=function(){
+
+          if(this.readyState==4 && this.status==200){
+            document.getElementById("detay").innerHTML= this.responseText;
+          }else{
+            document.getElementById("detay").innerHTML= "İstek ve yanıt anında hata oluştu";
+          }
+
+
+        };
+        Istek.open("GET","C:\\Users\\hasre\\OneDrive\\Masaüstü\\TU\\js-veri\\veri.txt",true);
+        Istek.send();
+    }
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+
+</html>

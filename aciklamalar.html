@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="text/html initial-scale=1.0" htpp-equiv="content-type">
+</head>
+
+<body>
+  
+  <script type="text/javascript" language="javascript">
+
+    //AÇIKLAMALAR!!!
+
+
+    // alert(isim);
+    // window.alert: normal alert ile aynı şeyi döndürür fakat bu nesneseldir. 
+    //document.writeln ile aynı şey, nesneseldir ikisi de ama writeln yeni satıra geçiş yapar.
+    // console.log(): sayfada aşağıda açılan konsol ekranına yazdırır.
+    //inner.html : HTMl döküman içerisinde bulunan html alanına veri gönderir. 
+    // document.getElementById("Bir").innerHTML= "Enginer";
+    // typeof : değişkenin türünü döndürür. 
+    // eval() :komutu gelen parametreyi javsc. koduna çevirir. mesela eval("10+2") yaparsan ekrana string olarak değil de değeri yazdırır.
+    // slice() :kendisine verilecek olan parametreler ile tanımlanmış değişken içeriği aralığında bulunan değerleri kopyalar ve yeni bir içerik yapar döndürür. 
+
+
+    //substring(): kendisine verilecek olan parametre ile tanımlanmıs değişken içeriği alanında bulunan değerleri kopyalayarka yeni bir içerik olusturur vee geriye döndürür. 
+    //substr(): substring ile açıklaması aynı. 
+    //concat(): üzerinde çalışılan değişkene paremetrik olarak verilen değişken veya değişkenleri dahil ederrek yeni bir içerik olusturup döndürür. 
+    // repeat(): kendine parametre olarak verilen değer kadar tekrar eder. 
+    //indexOf() : içine aldığı parametrenin kaçıncı index olduğunu döndürür. 
+    //lastIndexOf(): parametreyi arar ve kaçıncı index se onu döndürür. (en son eşleşen)
+    //search(): parametre olarak aldığı değerin il eşleşenein indexini döndürür. (cümle de alabilir)
+    //includes(): içine aldığı parametreyi kontrol ederek boolean döndürür. varsa true, yoksa false
+    //startWith(): içine aldığı parametre ile başlıyor mu onu kontrol eder. 
+    //endsWith() :içine aldığı parametre il bitiyor mu kontrol eder, boolean sonu. döndürü. 
+    // match() : parametre olarak aldığı değişkeni kontrol eder, eşleşeni döndürür. /parametre/"g" eklersen birden fazla varsa onları da alır. /parametre/"i" eklersen de büyük küçük bakmaz. 
+    // replace(): iki parametre alır. ilk parametre değişmesini istediğin kelime. ikinci parametre de ne olarak değiştirmek istiyosun. /parametre/"g" eklersen birden fazla varsa onları da alır. /parametre/"i" eklersen de büyük küçük bakmaz.
+    // split(): parametre olarak verdiğin harfde yazıyı böler. Dizi yapar. 
+    //localeCompare(): iki değeri unicode olarak karşılaştırır. birinci önce geliyorsa -1, eşitse 0, ikinci önce geliyorsa 1 döndürür. 
+    //encodeURI(): metindeki özel karakterleri UTF-8'e çevirerek döndürür.
+    //decodeURI(): üsttekinin tam tersini yapaar. 
+    //escape(): özel karakterleri unicode çevirir.
+    //unescape(): unicode karakterleri özel karaktere çevirir.
+    //sup(): ise üstteki kullanım gibi ama üst simge yapar. 
+    // big(), small(), bold(), italics()
+    //strike(): metni üzeri çizili yapar. 
+    //fixed(): daktilo fontlu metin yapar. 
+    //anchor(): html deki "a" etiketi gibi. isim verebiliriz değere.
+    // link(); değeri, linli hale getirir. // eğer koşul doğruysa soru işsaretinden sonraki, yanlışsa iki noktadan sonraki çalışır. 
+    // ?: ternary koşul ifadesi. 
+
+    // diziler
+
+    // pop() : dizideki en son ifadeyi siler ve elemanı döndürür. 
+    //shift(): dizinin ilk elemanını siler ve elemanı döndürür.
+    //push(): dizinin sonun eleman veya elemanlar eklenmesini sağlar. 
+    //unshift(): dizinin başına eleman veya elemanlar ekler. 
+    //splice(): iki parametre ver. mesela (1,3): birden üçe kadar sil. diziden eleman veya elemanlar sil. ya da ekle!
+    //fill(): aldığı parametreler arasında tanımlanan dizi değelerinini değiştirir ve döndürür. 1. parametre: değer 2.p: başlangıç indisi, 3.p: bitiş indisi. 
+    //concat(): üzeirnde çalışılan diziye parametrik olarak verilenn eleman veya elemanları dahil ederek yeni bir dizi olusturur döndürür. 
+    //join(): dizideki elemanlar arasında ayraç olarak kullanaabilirsin.
+    //valueOf(): dizileri birbirine aktarım yapar. yeni bir dizi olusturur. 
+    //indexOf(): dizi içerisinde parametrik olarak verilen değeri arar ve ilk uyanın indexini döndürür. 
+    //find(): parametre olarak aldığını dizi ile karsılastırır. aynısının indexini döndürür. 
+    //reverse(): dizi içerisindeki sıralamayı tersine çevirerek yeni dizi olusturup döndürür. 
+    // sort(): dizi içeriğinin sıralanmasını sağlar. (unicode) olarak
+    // some(): parametre olarak belirtilen fonk. true dönene kadar dizide dolasır. 
+    //every():  parametre olarak belirtilen fonk. false dönene kadar dizide dolasır. 
+    //filter(): parametre olarkak verilen fonk. dizide teker teker çalıstırır. true olanları yeni diziye alır ve döndürür. 
+    //map(): içine parametre aldığı fonk. dizideki elemanlara uygular ve dönrürür. 
+    //avarage(): dizinin ortalamasını bulur.
+    //shuffle(): dizinin elemanlarını karıştırır ve yeni bir dizi olusturarak dödnürür. 
+
+    //MATH
+
+    //isFinite(): verilen parametrenin en büyük pozitif sayı ile en küçük negatif sayı aralığında olup olmadığını boolean döndürürr. 
+    //toFixed(): odalıklı bir sayıyı parametre olarak verilen rakam kadar onadlık bırakarar yeniden döndürür. 
+    // isprecision(): parametre olarak verilen sayının kaç basamaklı olacağına karar verir.  
+    //parseInt(): parametre olarak verilen değeri tam sayı döndürür. 
+    //parseFloat(): parametre olarak verilen değeri floata döndürür.
+    //ceil(): parametre olarak verilen değeri yukarı yuvarlayarak döndürür. 
+    //floor(): parametre olarak verilen değeri aşağıya yuvarlayarak döndürür.
+    //round(): parametre olarak verilen değeri nereye yuvarlaması gereekiyorsa yuvarlayarak döndürür. 
+    //trunc(): parametre olarak verilen değerin ondalıklı kısmın kaldırarak tam sayı kısmını döndürür.
+    //sign(): parametre olarak verilen değerin işaretini döndürür. -1,1, 0 döndürür.
+    //pow(): üst alma
+    //abs(): mutlak değer
+    //sqrt(): karekök
+    //cbrt(): küpkök
+
+    // DÜZENLİ İFADELER
+
+    //iki şekilde gösterilir. ya; New RegExp(...) ya da, /..../
+    //match(): parametre olarak alanla diziyle karsılastırıp eşleşeni döndürür. 
+    // "g" eklersen sonuna kadar arar. global() g kullanıp kullanmadığına bakar boolean döndürür.
+    // "i" eklersen büyük küçük harf bakmaz. ignore() i  kullanıp kullanmadığına bakar boolean döndürür.
+    // "m" eklersen birden fazla satır ve sütun kontrol eder. multiline() m kullanıp kullanmadığına bakar boolean döndürür.
+    // test(): eşleşme var mı bakıp boolean döndürür.
+    //source(): düzenli ifade içinde kullanılan desen değerini döndürür. 
+    //search(): düzenli ifade içinde eşleşmeyi sağlayan ilk ifadenin indix değerini döndürür
+    //lastMatch(): eşleşen son değeri döndürür. 
+    //leftContext(): eşleşmeyi sağlayanın sol kısmını döndürür. 
+    //rightContext():eşleşmeyi sağlayanın sağ kısmını döndürür.
+    //replace(): değişken içeriğini değiştirir. 
+    //compile(): düzenli ifadedeki deseni değiştirir.
+
+    //TARİH VE ZAMAN
+
+    //Date()
+    //getFullYear(): yıl bilgisi depola //getMonth(): ay depola //getDay():gün bilgisi depola. ... getleri set yaparsan kendin de belirleyebilitsin. 
+    //parse(): belirtilen tarih ile 1 ocak 1970 arasındaki farkı alır. 
+
+    // Nesneler
+
+    // fonksiyon içinde tanımlarsan this. kullan. 
+    // prototype tanımladyısan onun içine ulasmak için __proto__ kullan.
+    // hasOwnProporty(), parametre olarak aldığı özelliğin kullanılıp kullanılmadığını boolean olarak kontrol eder. 
+    //constructor(): nesnenin yapıcı metodunu döndürür. olusturur. 
+    // watch(): nesnenin belirtilen bir özelliiği değiştiğinde çalıstırılacak olan herhangi bir işlev eklemek için kullanılır. 1. parametre: özelliğin adı, 2. parametre: özelliğin esli değeri, 3. parametre: özelliğin yeni değer. 
+    //unwatch(): nesneye özellik eklediğinde eklenmiş bir işlevi kaldırmak için kullanılır.
+    // toSource(): nesnenin kaynak kodunu geriye döndürür. 
+
+    //DOM
+
+    //getElementById(): parametre olarak verilen değer doğrultusunda belge içerisindeki belirtilen ıd içeriğine sahip elemanın referansını elde eder. 
+    //getElementsByName(): parametre olarak verilen değer doğrultusunda belge içerisinde belirtilen name özelliğine sahip tüm elemanların referansını elde eder. Elemanalr birden fazla ise döngü ile elde edilir. 
+    //documentElement: HTML tagının referansını element nesnesi halinde elde etmek için kullanılır. 
+    //documentMode: Belgeyi oluşturmak için tarayıcı tarafından kullanılan modun referansını elde eder. 
+    //location: url adresi döndürür ve url atama yaptırabilir. 
+    //domain: belgenin domanin referansını elde eder. 
+    //lastModified : belgenin en son güncellenme saat ve tarihini döndürür. 
+    //readyState: belge içeriğinin tarayıcı tarafından yüklenme durumunu döndürür. 
+    //designMode: belgenin çalışma anında düzenlenebilir olup olmadığı referansını elde etmek için kullanılır. 
+    //hasFocus: belge odağının olup olmadığı referanını boolean türünde döndürür.
+    //activeElement: belge içerisindeki seçili veya odaklanmış elamanın referansını elde etmek için kullanılırç 
+    //anchors: belge içerisindeki çapa tagına sahip tüm elemanların referansını elde etmek için kullanılır. fazla ise eleman döngü. 
+    //scripts: belge içindeki script tagına sahip tüm elemanların referansını elde etmek için.
+    //embeds: belge içerisindeki obeje veya embed tagına sahip elemanların referansını elde etmek için kullanılır. 
+    //forms: form tagına sahip elemanları elde eder. 437. ders html için güzel bak!
+    // images: belge içerisindeki img tagına sahip tüm elemanalrın referansını döndürür. 
+    //plugins: tarayıcıdaki tüm eklentileri döndürür. navigator.plugins. diye kullan. 
+    //createAttiribute(): belge içerisinde istenilen bir elemana yeni bir özellik düğümü oluşturur ve bu düğümü bir node object olarak döndürür. setAttiribute
+    //createElement(): yeni bir html nodu oluşturur ve düğüm nesnesi  olarak döndürür. 
+    //createComment(): belge içerisidne yeni bir açıklama düğümü olusturur. appendChild: düğüme en sonda ekleme yapar. 
+    //addEventListener(): belgeye olay dinleyicisi ekler. ilk parametre, ne zaman aktif edileceği, ikinci paramettre de ne yapacağı. 
+    //removeEventListener(): belgeye addEventListener ile eklenen işaretleyiciyi siler. 
+    //dir : metinlerin yazılış yönü referansını elde etmek için kullanılır. yön ataması da ayarlayabilir. "ltr": soldan sağa "rtl": sağdan sola. 
+    //open(): belge içrisinden yeni bir html çıktı akışı açmak 1. parametre: MimeType 2. parmetre: geçmiş aktarımı  yeni sayfa açmak için kullanabilrisin. 
+    //close(): open ile açılan html çıktı akışını kapatmak. 
+    //styleSheets: belge içerisindeki stil nesnelerini döndürür? 
+    //querySelector(): css seçicileri ile belgedeki referansları elde eder. 
+      //adooptNode(): belge içerisine başka bir belgeden düğüm eklemek için kullanılır. diğer belgeden o düğümü siler. 
+      //importNode():belge içerisine başka bir belgeden düğüm eklemek için kullanılır.diğer belgeden silmez orada da kalır. 
+      //normlize(): belgedeki boş metin düğümlerini kaldırarak bitişik düğüme katılmasını sağlar.  
+      //cookie = cookie değeri; cookie yaşam süresi; path 
+      //specified: belgedeki html elemanına herhangi bir özelliğin eklenip eklenmedini boolean olarak döndürür.
+      //getNamedItem(): belgedeki html elemanın eklenen özellik düğümünün referansını elde eder.
+      //setNamedItem(): belge içerisindeki html elamanına özellik ndüğümü ve değeri ekler. 
+      //removedNamedItem(): belgedeki eklenen özellik düğümünü kaldırır.     
+      //item(): belgedeki html elemanın eklenmiş olann özellik nodunun referansını elde etmek ve ayarlamak için. 
+      //accesKey : belgedeki herhangi bir html elamanına atanmış olan acceskey değerini elde etmek ve ayarlamak için. 
+      //focus(): belgedeki herhangi bir html elemanına odaklanmak için kullanılır. 
+      //blur(): odaktan çıkmasını sağlar. 
+      // classList : belgedeki ehrhangi bir html elemanına atanmış olan class listesi isimlerini elde etmek. 
+      //nextElementSibling: belge içerisindeki html elemanının içerisindeki aynı seviyede (kardes) olan elemanlardan belirtilecek olan elemandan sonraki elemanı elde etmek için
+      //previousElementSbling : belgedeki html tagında kardeş taglardan belirtilenden öncekini elde eder. 
+      //contains(): belge içerisindeki bir nodun alt düğümü olup olmadığını kontrol ederek boolean döndürür. 
+      //appenChild(): bir düğümü belge içerisinde belirtilecek herhangi ir elemanın içine sonda olmak üzere ekler. 
+      //removeChild(): belge içerisindeki herahngi bir html elamanın içerdiği düğümü kaldırmak için. 
+      //replaceChild(): belge içerisindeki html elemanının içerdiği düğümü değiştirir.
+      //cloneNode(): belge içerisidneki herhangi bir html elamanının içerdiği düğümü kopyalamak için.
+      //insertBefore(): bir düğümü belge içinde baska bir düğümün önüne eklemek için. 
+      //hasAttribute(): belge içindeki bir html elamanının belirtilen özelliğe sahip olup olmadığı boolean döndürür. 
+      //getAttribute(): html elemanının belirtilen özelliğinin değerini elde eder. 
+      //setAttribute(): html elemanına belirtilen elemanına belirtilen özelliği değeri ekler. 
+      //ondblclick : çift tıklandığında ne yapacak. 
+      //onmousedown: belge içerisindeki herhangi bir elemana sol veya sağ tıklandığında çalışacak fonk. 
+      //oncontextmenu: belge içerisindekii herhangi bir elamana sağ tık yaptığında çalışacak fonk. 
+      //onmouseover: belge içerisindeki herhangi bir elamanın üzeirne gelindiğinde belirtilecek fonk. 
+      //onmouseout: belge içindeki elemanın mouse ile üzeirnden gidildiğinde çalışacak fonk. 
+      //onmouseenter: belge içiğndeki herhangi elemanın mouse ile kapsama alanına girildiğinde belirtilecek fonk. 
+      //detail: mouse kaç kere tıklandı sayısı döndür. 
+      //clientX ve clientY: mousun x ve y kordinatlarını döndürür.
+      //pageX/Y: ilgili dökümanta göre uzaklık. 
+      //onkeydown: belge içerisindeki elema üzerinde klavyeden tusa basıldığında çağrılacak fonk. 
+      //onkeypress: belge içerisindeki elema üzerinde klavyeden tusa basıldığında çağrılacak fonk.
+      //onkeyup: tus bırakılığında 
+      //key: onkey.. li olan tüm fonksiyonlar için basılan tusu verir. 
+      //onunload: sayfa yenilendiğinde kapandığında gerçekleşir. 
+      //onbeforeunload: sayfanın kullanıcı tarafından yenileme ve kapatma isteklerinde işlem gerçekleştirilmeden belirtilecek fonk. 
+      //onpageshow:sayfa kullanıcıdan tarafından görüntülenebiliyorsa belirtelecek fonk. 
+      //onpagehide: sayfa kullanıcıdan tarafından görüntülenemiyorsa belirtelecek fonk.
+      //onresize: browser için sayfa boyutu değiştirme
+      //onScrool: kaydrma yaptığında çalısacak fonk. 
+      //ontoggle: belge içinde html details içeriği açıldığında veya kapandığında belirtilecek fonk. 
+      //oncanplay: medya elemanı  hazır olduğunda çalısır. 
+      //onplay: medya elemanıu yürütüldüğünde çalıscak fonk. 
+      //onpause: durdurunca 
+      //onseeked: medya elemanının yürütme komutu kullanıcı tarafından yeni konuma getirildiğinde çalısır. 
+      //onended: meyda süresi bittiğinde çalısan fonk. 
+      //onprogress: meyda indirilirken çalısacak fonk. 
+      //onstalled: tarayıcı medya verisini indiremiyorsa kullan. 
+      //onabort: medya ve elemanların yüklenmedi durdurulduğunda belirtilecek olan fonk. 
+      //ondurationchange: medya elemanın nesnesinin süresi değiştirildiğinde çağıralacak fonk. 
+      //onfocus: form içerisindeki bir elemana odaklanıldığında belirtilecek fonk. 
+      //onblur: form içerisindeki elemanın odağından çıkıldığında belirtilecek fonk. 
+      //onfocusin: formdaki elemana odaklanmak üzereyken kullanılacak fonk. 
+      //onfocusout: odaktan çıkmak üzere 
+      //onchange: form içinde elemanın değeri veya seçimi değiştirildiğinde kullanılacak fonk. 
+      //oninput: form içindeki elemanın değeri veya seçimi değiştirilirken kullanılacak fonk. (işlem anında)
+      //oninvalid: elemanın değeri geçersizse kullanılır. 
+      //onsubmit: belge içerisindeki form gönderilmek istenirse kullanılır. 
+      //onreset: form sıfırlanmak istenirse kullanılır. 
+      //onselect:form içindeki elemanın metni seçilirse kullanılır. 
+      //ondrag: eleman sürüklendiğinde 
+      //ondragenter: eleman hedef kapsama alanına girdiğinde 
+      //ondragover: elemanın hedef kapsama alanı üzerindeyken belirtilecek fonk. 
+      //ondrop: elemanın hedef kapsama alanına bırakıldığında çalışacak fonk. 
+      //onforeprint: belge içeriği kulllanıcı tarafondan yazdırılmak istendiğinde yazdırma islemi başlamadan belirtilecek fonk. 
+      //onafterprint: yazdırdırma işlemi başltadıktan sonra kullanılacak fonk.
+      //type: tanımlı bir event türü adının referansını elde etmek için. 
+      //currentTarget: belge içinde tanımlı eventi tetikleyen html elemanını event işaretçileri tarafınfan tag adı referansını elde etmek için 
+      //target: beldegeki tanımlı eventı tetikleyen bir html elemanının tagını referans olarak döndürür. 
+      //timeStamp: belgede tanımlı eventın oluşturulduğu zaman ile çalıştırıldığı zaman arasındkai fark süresini mikrosaniye olarak verir. 
+      //cancelable: begede tanımlı eventın iptal edilebilir olup olmadığını kontrol et. 
+      //preventDefault(): belge içinde tanımlı olayın işlevini akldırmak için kullanılır. 
+      //defaultPrevented():preventDefault kullanılıp kullanolmadığına bakar ve boolean döndürür. 
+
+
+      //BOM 
+
+      //open(): yeni tarayıcı penceresi açmak için kullanılır. 
+      //fullscreen: açılacak pencerenin tam ekran modunda olup olmayacağı
+      //location: adres çubğu gösterilip gösterilmeyeceği 
+      //menubar: menü çubuğu gösterilip gösterilmeeyceği 
+      //scrollbars: kaydırma çubğu gösterilip gösterilmeeyceği 
+      //status: durum çubuğu gösterilip gösterilmeeyceği 
+      //toolbar: araç çubuğu gösterilip gösterilmeeyceği 
+      //titlebar: başlık çubuğu gösterilip gösterilmeeyceği 
+      //resizeable: boyutlandırılıp boyutlandırılmadığını ayarlamak için
+      //opener: yeni pencereyi oluşturan pencereye belirtilecek olan referan değerini döndürür. 
+      //close: geçerli pencereyei kapatmak için kullanılır. 
+      //closeed: pencerenin kapatılıp kapatılmadığını boolean döndürür. 
+      //name: pencere referans değerini elde etmek veya ayarlamak için kullanılır 
+      //franes: pencere içerisindeki çerçevelerin nesne referansını elde etmek için 
+      //parent: geçerli çerçevenin üst pencerisini elde etmek için
+      //top %self : içinde bulunulan perncerinin en üst seviye olup olmadığını bulup boolean dödnürür. 
+      //stop: pencerenin yüklenmesini durdurmak için kullanılıt.  
+      //print: pencere içeriğini yazdırmak için
+      //history: pencerenin geçmiş nesnesine erişir. 
+      //back(): geçmişte bir geri git
+      //forward(): bir ileri git.
+      //go(): belirtilen kadar ileri ya da geri git. 
+      //confirm(): kullanıcı işlemlerinde onay penceresi çıkaırı. 
+      //prompt(): kullanıcıdan bilgi talep etmek için girdi penceresi olusturur. 
+      //moveBy(): pencerenin sol üst köşe kordinatı baz alınarak ekranıne göre belirtilen konuma taşır. 
+      //resizeTo: yeniden boyutlandırma
+      //scrollBy: içine değer verdiğinde o kadar kayar. 
+      //colorDepth: kullanıcın ekranı için tanımlanmış olan renk derinliğini elde etmek için. 
+      //appName: tarayıcı adını döndürürür.
+      //product: tarayıcının görüntüleme motorunu elde etmek için
+      //pathname: bir urlin path bilgisini elde etmek ya da ayarlamak için kullanılır 
+      //assign: tarayıcı pencerisine yeni bir sayfa eklemek için kullanılır
+      //replace: tarayıcı pencerisinde bulunan sayfayı yeni bir sayfa ile değiştirmek için kullanılır. 
+      //reload: pencere içinde bulunan sayfayı yenilemek için kullanılır. 
+      
+
+      //setTimeOut(): belge içinde tanımlanan herhangi bir kodlamayı belirtilen süre sonunda sadee bir defa olmak üzere çalıstırır. 
+      //cllearTimeout(). SetTimeout ilr oluşturulan zamanlaycıyı temizlemek için kullanılır. 
+      //setInterval(): zamanlayıcı olusturur ama belirtilen zamanalrda tekrar tekrar çalıstırılır. 
+      //clearInterval(): setIntervalı temziler.  
+
+
+
+  </script>
+</body>
+
+</html>

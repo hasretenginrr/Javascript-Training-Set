@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ornek()">metnin içindeki mail adresi için tıklayınız</button>
+    <div id="sonuc"></div>
+    <div id="icerik">
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam hasretenginer@gmail.com SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+        SelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelamSelam
+    </div>
+
+
+    <script type="text/javascript">
+        function ornek(){
+        var deger= document.getElementById("icerik").innerHTML;
+        var desen= /[A-Z0-9a-z_.-]+@[A-Z0-9a-z\-]+\.[A-Za-z]{2,3}/gi;
+        var sonuc=deger.match(desen);
+        document.getElementById("sonuc").innerHTML="metindeki e-mail: <br>"+sonuc+"<br>"+"<br>";
+
+
+
+
+
+        }
+    </script>
+    
+</body>
+</html>

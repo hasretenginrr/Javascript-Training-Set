@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <textarea id="alan" style="width:500px; height: 250px;" onkeypress="ornek()"></textarea>
+    <br>
+    <div >kullanılan karakter: <span id="kullanilankarakter">0</span></div>
+    <div > Kalan karakter:  <span id="kalankarakter">10</span></div>
+
+<script>
+var kullanilan=0;
+var kalan=9;
+    function ornek(){
+        var baglan=document.getElementById("alan");
+        var uzunluk=baglan.value.length;
+        if(uzunluk>=kalan){
+            var deger= baglan.value;
+            var olustur=deger.substr(0,9);
+            document.getElementById("alan").value=olustur;
+            document.getElementById("kullanilankarakter").innerHTML=kalan+1;
+            document.getElementById("kalankarakter").innerHTML=0;
+        }else{
+            var deger=baglan.value;
+            var olustur=deger.substr(0,9);
+            document.getElementById("alan").value=olustur;
+            document.getElementById("kullanilankarakter").innerHTML=uzunluk+1;
+            document.getElementById("kalankarakter").innerHTML=(kalan+1)-(uzunluk+1);
+        }
+
+
+
+    }
+</script>
+
+
+
+</body>
+</html>

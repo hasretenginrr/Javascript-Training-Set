@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kapsamaalani{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        #haberalani{
+            width: 1000px;
+            margin:0 auto;
+        }
+        #baslikalani{
+            width: 900px;
+            float: left;
+            height: 60px;
+            text-align: left;
+            
+        }
+        #iconalani{
+            width: 100px;
+            float: left;
+            text-align: right;
+            height: 45px;
+            padding-top: 15px;
+           
+        }
+        #icerik{
+            text-align: justify;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="kapsamalani">
+        <div id="haberalani">
+            <div id="baslikalani"><h3>TEXT</h3> </div>
+                <div id="iconalani"> 
+                    <img src="C:\Users\hasre\OneDrive\Masaüstü\TU\javascript1\image\image1.png" title= "Metni büyüt" style="cursor: pointer; max-width: 100%; height: auto; " onclick="buyut()"> 
+                    <img src="C:\Users\hasre\OneDrive\Masaüstü\TU\javascript1\image\image2.png" title= "Metni büyüt" style="cursor: pointer; max-width: 100%; height: auto; " onclick="kucult()"></div>
+                    <hr>
+                    <div id="icerik"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius non cumque dolorum dicta et id, sint autem labore veritatis est modi perspiciatis iusto tempore ipsum consequatur quod eveniet officiis dolorem?
+                    <hr>
+                </div>
+                </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var standart=15;
+        function buyut(){
+            standart=standart+1
+            document.getElementById("icerik").style.fontSize= standart +"px"
+            
+
+        }
+        function kucult(){
+            standart=standart-1
+            document.getElementById("icerik").style.fontSize= standart +"px"
+            
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #kapsamaalani {
+            position: relative;
+            width: 1200px;
+            height: auto;
+            border: 1px solid black;
+            margin: 0 auto;
+        }
+        #alan {
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+        }
+        #tablobaslik {
+            width: 1200px;
+            height: 30px;
+            padding-top: 10px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: #F1F1F1;
+            font-weight: bold;
+            border: 1px solid black;
+        }
+        .personel {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .isim {
+            width: 195px;
+            height: 25px;
+            text-align: left;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+        .grafik {
+            height: 30px;
+            background-color: hsl(34, 57%, 70%);
+            position: relative;
+        }
+        .deger {
+            text-align: right;
+            color: white;
+            padding-top: 3px;
+            font-size: 14px;
+            position: absolute;
+            right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="alan">
+        <div id="tablobaslik">Personel Başarı Yüzdesi</div>
+        <div id="kapsamaalani">
+            <!-- Yeni personel eklendikçe buraya gelecek -->
+        </div>
+        <button id="addPersonButton">Yeni Personel Ekle</button>
+    </div>
+    <script>
+
+        var zaman =setInterval(function(){
+            if(yuzde<50){
+                document.getElementById("grafik").style.backgroundColor="#F0EB5D";
+            }else{
+                document.getElementById("grafik").style.backgroundColor=""
+            }
+        })
+        // Mevcut personellerin yüzdelerini ayarlama
+        function setGrafik(id, yuzde) {
+            let grafik = document.getElementById(`grafik${id}`);
+            let deger = document.getElementById(`deger${id}`);
+            grafik.style.width = yuzde + '%';
+            deger.innerHTML = `%${yuzde}`;
+        }
+
+        // Yeni personel ekleme işlevi
+        document.getElementById('addPersonButton').addEventListener('click', function() {
+            let isim = prompt("Lütfen personelin adını girin:");
+            let yuzde = prompt("Lütfen personelin başarı yüzdesini girin:");
+
+            if (isim && !isNaN(yuzde) && yuzde >= 0 && yuzde <= 100) {
+                let kapsamaAlani = document.getElementById('kapsamaalani');
+
+                let personelSayisi = kapsamaAlani.children.length + 1;
+                
+                // Yeni personel div'i oluşturma
+                let personelDiv = document.createElement('div');
+                personelDiv.className = 'personel';
+                personelDiv.id = `personel${personelSayisi}`;
+                
+                // Yeni personel isim div'i oluşturma
+                let isimDiv = document.createElement('div');
+                isimDiv.className = 'isim';
+                isimDiv.id = `isim${personelSayisi}`;
+                isimDiv.textContent = isim;
+                personelDiv.appendChild(isimDiv);
+
+                // Yeni personel grafik div'i oluşturma
+                let grafikDiv = document.createElement('div');
+                grafikDiv.className = 'grafik';
+                grafikDiv.id = `grafik${personelSayisi}`;
+                
+                let degerDiv = document.createElement('div');
+                degerDiv.className = 'deger';
+                degerDiv.id = `deger${personelSayisi}`;
+                grafikDiv.appendChild(degerDiv);
+
+                personelDiv.appendChild(grafikDiv);
+                kapsamaAlani.appendChild(personelDiv);
+
+                // Yeni personel grafiğini ayarlama
+                setGrafik(personelSayisi, yuzde);
+            } else {
+                alert("Lütfen geçerli bir ad ve yüzde değeri girin.");
+            }
+        });
+    </script>
+</body>
+</html>
